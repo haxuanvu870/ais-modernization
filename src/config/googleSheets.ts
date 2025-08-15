@@ -4,7 +4,6 @@ import { env } from './env'
 // Google Sheets API configuration
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 const SPREADSHEET_ID = env.GOOGLE_SPREADSHEET_ID
-const SHEET_RANGE = env.SHEET_RANGE
 const GOOGLE_APPLICATION_CREDENTIALS = env.GOOGLE_APPLICATION_CREDENTIALS
 
 // Check if Google Sheets is properly configured
@@ -45,7 +44,7 @@ export const googleSheets = {
       
       await sheets.spreadsheets.values.append({
         spreadsheetId: SPREADSHEET_ID,
-        range: SHEET_RANGE,
+        range: 'Contacts!A:F',
         valueInputOption: 'RAW',
         requestBody: {
           values: [row]
@@ -71,7 +70,7 @@ export const googleSheets = {
       
       const response = await sheets.spreadsheets.values.get({
         spreadsheetId: SPREADSHEET_ID,
-        range: SHEET_RANGE,
+        range: 'Contacts!A:F',
       })
 
       const rows = response.data.values || []
