@@ -20,7 +20,7 @@ export default function Testimonial() {
           </div>
           
           <blockquote className="text-2xl lg:text-3xl font-medium leading-relaxed mb-8">
-            "We went from a 50 million to over 100 million dollar shop in a matter of years, and it wouldn't have been possible without Mark & AIS and their expertise."
+            &quot;We went from a 50 million to over 100 million dollar shop in a matter of years, and it wouldn&apos;t have been possible without Mark & AIS and their expertise.&quot;
           </blockquote>
           
           <div className="flex items-center justify-center space-x-4">

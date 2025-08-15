@@ -25,7 +25,7 @@ export default function ClientLogos() {
             Trusted by Leading Companies
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We've helped businesses across various industries modernize their systems and achieve remarkable results.
+            We&apos;ve helped businesses across various industries modernize their systems and achieve remarkable results.
           </p>
         </motion.div>
         
