@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Testimonial() {
   return (
-    <section className="py-20 bg-blue-600 text-white">
+    <section id="testimonial" className="py-20 bg-blue-600 text-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

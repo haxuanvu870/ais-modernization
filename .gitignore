@@ -40,4 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/src/generated/prisma
+# Google Sheets credentials
+*.json
+src/config/service-account-key.json
+
+# Prisma (removed)
+# /src/generated/prisma

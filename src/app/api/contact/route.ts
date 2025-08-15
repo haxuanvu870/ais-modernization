@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import prisma from '@/config/database'
+import googleSheets from '@/config/googleSheets'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,21 +14,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create contact record in database
-    const contact = await prisma.contact.create({
-      data: {
-        name,
-        email,
-        phone: phone || null,
-        company: company || null,
-        message: message || null,
-      },
+    // Save contact to Google Sheets
+    await googleSheets.addContact({
+      name,
+      email,
+      phone: phone || '',
+      company: company || '',
+      message: message || '',
     })
 
     return NextResponse.json(
       { 
-        message: 'Contact form submitted successfully',
-        contact 
+        message: 'Contact form submitted successfully'
       },
       { status: 201 }
     )
